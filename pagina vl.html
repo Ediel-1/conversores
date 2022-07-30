@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculador-conversor de eenergia.</title>
+    <link rel="stylesheet" href="estilo/estilo7.css" type="text/css">
+<script language="JavaScript">
+
+function convertform(form){
+    var firstvalue = 0;
+    for (var i = 1; i <= form.count; i++) {
+       // Find first non-blank entry
+       if (form.elements[i].value != null && form.elements[i].value.length != 0) {
+          if (i == 1 && form.elements[2].value != "") return false;
+          firstvalue = form.elements[i].value / form.elements[i].factor;
+          break;
+       }
+    }
+    if (firstvalue == 0) {
+       clearform(form);
+       return false;
+    }
+    for (var i = 1; i <= form.count; i++)
+       form.elements[i].value = formatvalue((firstvalue * form.elements[i].factor), form.rsize);
+    return true;
+}
+function formatvalue(input, rsize) {
+   var invalid = "**************************";
+   var nines = "999999999999999999999999";
+   var strin = "" + input;
+   var fltin = parseFloat(strin);
+   if (strin.length <= rsize) return strin;
+   if (strin.indexOf("e") != -1 ||
+       fltin > parseFloat(nines.substring(0,rsize)+".4"))
+      return invalid.substring(0, rsize);
+   var rounded = "" + (fltin + (fltin - parseFloat(strin.substring(0, rsize))));
+   return rounded.substring(0, rsize);
+}
+function resetform(form) {
+    clearform(form);
+    form.elements[1].value = 1;
+    convertform(form);
+    return true;
+}
+function clearform(form) {
+    for (var i = 1; i <= form.count; i++) form.elements[i].value = "";
+    return true;
+}
+
+</script>
+
+<meta charset="utf-8">
+<form>
+  
+</head>
+
+<body>
+<center>
+<br>
+<div style="width:500px;height:65px; background-color:#FDFF67; border-style:solid; border-color:#11020F">
+<h1  style="color:#292828"><strong><u>Conversor de Energia.</u></strong></h1>
+</div>
+
+
+<h1  style="color:#641E16 "> Información energetica.</h1>
+<h3> 
+El término energía tiene diversas acepciones y definiciones, relacionadas con la idea de una capacidad para 
+obrar, surgir, transformar o poner en movimiento. En física, energía se define como la capacidad para realizar 
+un trabajo.​ En tecnología y economía, «energía» se refiere a un recurso natural.
+<br>
+<br>
+La energía es la capacidad de la materia para realizar un trabajo. El término se usa en diferentes áreas: en 
+física se refiere a la fuerzas capaces de realizar una acción: movilizar, transformar, hacer surgir, mantener 
+en funcionamiento un objeto.
+</h3><br>
+<img src="imagenes/energia1.jpg" align="right" width="300" height="280"/>
+
+<table width="682" border="10x" >
+  <tr>
+    <td vAlign="center" align="middle" colSpan="230">
+    <h2 align="center"><font size="5">Conversor de energia ¦﴿</font></h2>
+    </td>
+  </tr>
+  <tr>
+    <td width="88" align="middle" bgcolor="#FDFF67"><h2>julio</h2></td>
+    <td width="99" align="middle" bgcolor="#FDFF67"><h2>kilojulio</h2></td>
+    <td width="95" align="middle" bgcolor="#FDFF67"><h2>caloria-gramo</h2></td>
+    <td width="91" align="middle" bgcolor="#FDFF67"><h2>vatio-hora</h2></td>
+    <td width="96" align="middle" bgcolor="#FDFF67"><h2>pie-libra fuerza</h2></td>
+    <td width="87" align="middle" bgcolor="#FDFF67"><h2>BTU</h2></td>
+        <td width="62" bgcolor="#FDFF67"><input onClick="resetform(this.form)" type="button" value="Calibrar"></td>
+ 
+   </tr>
+
+  <tr>
+    <td height="37"><input onFocus="clearform(this.form)" size="7" name="val1"></td>
+    <td><input onFocus="clearform(this.form)" size="7" name="val2"></td>
+    <td><input onFocus="clearform(this.form)" size="7" name="val3"></td>
+    <td><input onFocus="clearform(this.form)" size="7" name="val4"></td>
+    <td><input onFocus="clearform(this.form)" size="7" name="val5"></td>
+    <td><input onFocus="clearform(this.form)" size="7" name="val6"></td>
+    <td bgcolor="#FDFF67"><input onClick="convertform(this.form)" type="button" value="Calcular"></td>
+  
+  </tr>
+</table>
+<script language="JavaScript">
+
+document.forms[0].count = 6;  
+document.forms[0].rsize = 7;  
+document.forms[0].val1.factor = 1;            // m to m.
+document.forms[0].val2.factor = 0.001;  // m to in.
+document.forms[0].val3.factor = 0.2390057361376673;  // m to ft.
+document.forms[0].val4.factor =  0.0002777777777777778;  // m to yards.
+document.forms[0].val5.factor = 0.7374631268436578; // m to mi.
+document.forms[0].val6.factor = 0.0009478672985781991; // m to nm.
+
+</script>
+</Center>
+<br>
+<button name="button">
+<p><a href="https://www.ambientum.com/enciclopedia_medioambiental/energia/">info. sobre la energias</a>
+  </button>
+  </p>
+  
+  <h3>Lista de otros tipo de conversores. :)</h3>
+  
+ <div class="3" style="width:300px;height:100px;">
+  <button style="background-color: #E7FED2" name="button">
+<p><a href="index.html"><h1 align="right">Menu principal.</h1></a>
+  </button>
+  </p>
+</div> 
+
+    <button style="background-color: #D0F8FE" name="button">
+<p><a href="pagina%20ds.html?val1=1000&val2=1&val3=100000&val4=1000000&val5=39370.1&val6=3280.84&val7=1093.61&val8=0.621371&val9=4374&val10=2247.2&button="><h4>convertir medidas.</h4></a>
+  </button>
+  </p>
+  
+  <button style="background-color: #FDD6AE" name="button">
+<p><a href="pagina%20tp.html"><h4>convertir temperatura</h4></a>
+  </button>
+  </p>
+  
+    <button style="background-color: #F1FEC7" name="button">
+<p><a href="pagina%20ms.html"><h4>convertir masa..........</h4></a>
+  </button>
+  </p>
+  
+     <button style="background-color: #D8FFF5" name="button">
+<p><a href="pagina%20ADE.html"><h4>convertir velocidad</h4></a>
+  </button>
+  </p>
+  
+ <button style="background-color: #E7C6FD" name="button">
+<p><a href="pagina%20tmp.html"><h4>convertir tiempo</h4></a>
+  </button>
+  </p>
+  
+          <button style="background-color: #F5CBA7" name="button">
+<p><a href="pagina%20nr.html"><h4>convertir números</h4></a>
+  </button>
+  </p>
+  
+            <button style="background-color: #D0ECE7" name="button">
+<p><a href="pagina%20vlm.html"><h4>convertir volumen</h4></a>
+  </button>
+  </p>
+
+</body>
+</form>
+</html>

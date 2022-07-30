@@ -1,0 +1,16 @@
+    body,td,th {
+	color: #000;
+}
+body {
+	  heigh:665px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlTayVgXt482i5hh-cJoAM161BQvtrWz-O_w&usqp=CAU");
+  background-size: 90rem;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+table {
+	background-color:#D0ECE7 ;
+	
+}

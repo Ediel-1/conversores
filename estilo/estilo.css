@@ -1,0 +1,17 @@
+    body,td,th {
+	color: #000;
+}
+body {
+  heigh:665px;
+  background-image: url("https://www.cristina-illustrations.com/wp-content/uploads/2012/graficos/texturas/vidrieras/vidriera-azules-aguas1.jpg");
+  background-size: 10rem;
+  background-repeat: repeat;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+table {
+	background-color:#ECF0F1;
+	
+}

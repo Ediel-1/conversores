@@ -1,0 +1,173 @@
+<html>
+<head>
+<title>Conversor de masa.</title>
+    <link rel="stylesheet" href="estilo/estilo3.css" type="text/css">
+
+
+<script language="JavaScript">
+
+function convertform(form){
+    var firstvalue = 0;
+    for (var i = 1; i <= form.count; i++) {
+       // Find first non-blank entry
+       if (form.elements[i].value != null && form.elements[i].value.length != 0) {
+          if (i == 1 && form.elements[2].value != "") return false;
+          firstvalue = form.elements[i].value / form.elements[i].factor;
+          break;
+       }
+    }
+    if (firstvalue == 0) {
+       clearform(form);
+       return false;
+    }
+    for (var i = 1; i <= form.count; i++)
+       form.elements[i].value = formatvalue((firstvalue * form.elements[i].factor), form.rsize);
+    return true;
+}
+function formatvalue(input, rsize) {
+   var invalid = "**************************";
+   var nines = "999999999999999999999999";
+   var strin = "" + input;
+   var fltin = parseFloat(strin);
+   if (strin.length <= rsize) return strin;
+   if (strin.indexOf("e") != -1 ||
+       fltin > parseFloat(nines.substring(0,rsize)+".4"))
+      return invalid.substring(0, rsize);
+   var rounded = "" + (fltin + (fltin - parseFloat(strin.substring(0, rsize))));
+   return rounded.substring(0, rsize);
+}
+function resetform(form) {
+    clearform(form);
+    form.elements[1].value = 1;
+    convertform(form);
+    return true;
+}
+function clearform(form) {
+    for (var i = 1; i <= form.count; i++) form.elements[i].value = "";
+    return true;
+}
+
+</script>
+<form>
+  
+  
+</head>
+
+<body>
+<center>
+<br>
+<div style="width:500px;height:65px; background-color:#F1FEC7; border-style:solid; border-color:#9C9C9B">
+<h1  style="color:#000000"><strong><u>Conversor de masa.</u></strong></h1>
+</div>
+
+<h1  style="color:#641E16 "> Lo que se necesita saber.</h1>
+<h3>En física, la masa (del latín massa) es una magnitud física y propiedad general de la materia que expresa la inercia o resistencia 
+al cambio de movimiento de un cuerpo. De manera más precisa es la propiedad de un cuerpo que determina la aceleración del mismo, cuando 
+este se encuentra bajo la influencia de una fuerza dada. Es una propiedad intrínseca de los cuerpos que determina la medida de la masa inercial 
+y de la masa gravitacional. La unidad utilizada para medir la masa en el Sistema Internacional de Unidades es el kilogramo (kg). 
+<br>
+<br>
+No debe confundirse con el peso, que es una magnitud vectorial que representa una fuerza cuya unidad utilizada en el Sistema Internacional de 
+Unidades es el newton (N),  si bien a partir del peso de un cuerpo en reposo (atraído por la fuerza de la gravedad), puede conocerse su masa al 
+conocerse el valor de la gravedad. Tampoco se debe confundir masa con la cantidad de sustancia, cuya unidad en el Sistema Internacional de Unidades 
+es el mol. 
+</h3>
+<img src="imagenes/peso.png" align="right" width="230" height="200"/>
+
+<table width="855" border="10x" >
+  <tr>
+ <td vAlign="center" align="middle" colSpan="20">
+    <h2 align="center"><font size="6">Conversor de masa :}</font></h2>
+    </td>
+  </tr>
+  <tr>
+    <td width="101"  align="middle" bgcolor="#F4D9FC"><h2>Gramos</h2></td>
+    <td width="102" align="middle" bgcolor="#F4D9FC"><h2>Tonelada</h2></td>
+    <td width="111" align="middle" bgcolor="#F4D9FC"><h2>Kilogramo</h2></td>
+    <td width="100" align="middle" bgcolor="#F4D9FC"><h2>Piedra</h2></td>
+    <td width="99" align="middle" bgcolor="#F4D9FC"><h2>Libra</h2></td>
+    <td width="99" align="middle" bgcolor="#F4D9FC"><h2>Onza</h2></td>
+    <td width="111" align="middle" bgcolor="#F4D9FC"><h2>Miligramo</h2></td>
+
+    <td width="62" bgcolor="#F4D9FC"><input onClick="resetform(this.form)" type="button" value="Calibrar"></td>
+    
+  </tr>
+  <tr>
+    <td height="42"><input onFocus="clearform(this.form)" size="10" name="val1"></td>
+    <td><input onFocus="clearform(this.form)" size="10" name="val2"></td>
+    <td><input onFocus="clearform(this.form)" size="10" name="val3"></td>
+    <td><input onFocus="clearform(this.form)" size="10" name="val4"></td>
+    <td><input onFocus="clearform(this.form)" size="10" name="val5"></td>
+    <td><input onFocus="clearform(this.form)" size="10" name="val6"></td>
+    <td><input onFocus="clearform(this.form)" size="10" name="val7"></td>
+    <td bgcolor="#F4D9FC"><input onClick="convertform(this.form)" type="button" value="Calcular"></td>
+  </tr>
+</table>
+</center>
+</form>
+<script language="JavaScript">
+
+document.forms[0].count = 7;  
+document.forms[0].rsize = 10;  
+document.forms[0].val1.factor = 1;            // m to m.
+document.forms[0].val2.factor = 0.000001;  // m to in.
+document.forms[0].val3.factor = 0.001;  // m to ft.
+document.forms[0].val4.factor = 0.00015748031496062991;  // m to yards.
+document.forms[0].val5.factor = 0.002204585537918871; // m to mi.
+document.forms[0].val6.factor = 0.03527336860670194; // m to nm.
+document.forms[0].val7.factor = 1000; // m to nm.
+
+</script>
+</Center>
+<br>
+<button name="button">
+<p><a href="https://es.wikihow.com/calcular-peso-a-partir-de-la-masa">info. de converción</a>
+  </button>
+  </p>
+  
+  <h3>Lista de otros tipo de conversores. :)</h3>
+  
+ <div class="3" style="width:300px;height:100px;">
+  <button style="background-color: #E7FED2" name="button">
+<p><a href="index.html"><h1 align="right">Menu principal.</h1></a>
+  </button>
+  </p>
+</div> 
+
+    <button style="background-color: #D0F8FE" name="button">
+<p><a href="pagina%20ds.html?val1=1000&val2=1&val3=100000&val4=1000000&val5=39370.1&val6=3280.84&val7=1093.61&val8=0.621371&val9=4374&val10=2247.2&button="><h4>convertir medidas.</h4></a>
+  </button>
+  </p>
+  
+  <button style="background-color: #FDD6AE" name="button">
+<p><a href="pagina%20tp.html"><h4>convertir temperatura</h4></a>
+  </button>
+  </p>
+  
+     <button style="background-color: #D8FFF5" name="button">
+<p><a href="pagina%20ADE.html"><h4>convertir velocidad</h4></a>
+  </button>
+  </p>
+  
+ <button style="background-color: #E7C6FD" name="button">
+<p><a href="pagina%20tmp.html"><h4>convertir tiempo</h4></a>
+  </button>
+  </p>
+      <button style="background-color: #FDFF67" name="button">
+<p><a href="pagina%20vl.html"><h4>convertir energia</h4></a>
+  </button>
+  </p>
+
+        <button style="background-color: #F5CBA7" name="button">
+<p><a href="pagina%20nr.html"><h4>convertir números</h4></a>
+  </button>
+  </p>
+  
+            <button style="background-color: #D0ECE7" name="button">
+<p><a href="pagina%20vlm.html"><h4>convertir volumen</h4></a>
+  </button>
+  </p>
+ 
+</body>
+
+</html>

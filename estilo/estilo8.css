@@ -1,0 +1,17 @@
+    body,td,th {
+	color: #000;
+}
+body {
+  heigh:665px;
+  background-image: url("https://img.pixers.pics/download(s3:700/FO/62/05/67/74/700_FO62056774_bb63ec5c636e913f6c6f7ba18768318c.jpg):pattern(0.2381w,0.2381h):resize(700,467):compose(download(cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png),over,480,417):format(jpg)/papeles-pintados-fondo-de-color-marron-claro-con-rizos-florales.jpg.jpg");
+  background-size: 150rem;
+  background-repeat: no-repeat;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+table {
+	background-color:#F5CBA7 ;
+	
+}

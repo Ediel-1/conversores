@@ -1,0 +1,16 @@
+    body,td,th {
+	color: #000;
+}
+body {
+	  heigh:665px;
+  background-image: url("https://previews.123rf.com/images/apostrophe/apostrophe1407/apostrophe140700038/30236976-pastel-s%C3%B3lido-textura-de-fondo-morado-color-morado-claro-y-se-desvaneci%C3%B3-dise%C3%B1o-antiguo-textura-apen.jpg");
+  background-size: 150rem;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+table {
+	background-color:#F1FEC7;
+	
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculador-conversor de distancias</title>
+    <link rel="stylesheet" href="estilo/estilo.css" type="text/css">
+
+<script src="java/script la.js"></script>
+    
+<meta charset="utf-8">
+<form>
+  
+</head>
+
+<body>
+
+<center>
+<br>
+<div style="width:500px;height:65px; background-color:#D0F8FE; border-style:solid; border-color:#9C9C9B">
+<h1  style="color:#000000"><strong><u>Conversor de medidas.</u></strong></h1>
+</div>
+
+<h1  style="color:#641E16 "> Un poco de info.</h1>
+<h3>La conversión de unidades es la transformación del valor numérico de una magnitud física, expresado en una cierta unidad de medida, 
+en otro valor numérico equivalente y expresado en otra unidad de medida de la misma naturaleza.
+<br>
+<br>
+Este proceso suele realizarse con el uso de los "factores de conversión" o las tablas de conversión de unidades.
+<br>
+<br>
+Frecuentemente basta multiplicar por una fracción (factor de una conversión) y el resultado es otra medida equivalente, en la que han cambiado 
+las unidades. Cuando el cambio de unidades implica la transformación de varias unidades, se pueden utilizar varios factores de conversión uno 
+tras otro, de forma que el resultado final será la medida equivalente en las unidades que buscamos.
+<br>
+<br>
+Por ejemplo, para pasar 8 metros a yardas, sabiendo que un metro equivale a 1.093613  yardas, se multiplica 8 por 1.093613; lo que da por resultado 
+8.748904 yardas ya que si mides 9 yardas equivale 9.839805</h3>
+<h4 style="color:#888B8A">Procede a convertir la distancia que quieras, agregando un número en cualquier cuadro vacio y acto seguido procede a 
+  pulsar en cuadro que dice &quot;calcular&quot;.</h4>
+<img src="imagenes/images.png" align="right" width="225" height="225"/><br>
+<table border="10x" >
+  <tr>
+    <td vAlign="center" align="middle" colSpan="20">
+    <h2 align="center"><font size="6">Conversor de distancias :D</font></h2>
+    </td>
+  </tr>
+  <tr>
+    <td height="34" colSpan="1" align="middle" bgcolor="#FCEAD0">Metros</td>
+    <td bgcolor="#FCEAD0" align="middle">Kilometros</td>
+    <td bgcolor="#FCEAD0" align="middle">Centimetros</td>
+    <td bgcolor="#FCEAD0" align="middle">Milimetros</td>
+    <td bgcolor="#FCEAD0" align="middle">Pulgadas</td>
+    <td bgcolor="#FCEAD0" align="middle">Pies</td>
+    <td bgcolor="#FCEAD0" align="middle">Yardas</td>
+    <td bgcolor="#FCEAD0" align="middle">Millas</td>
+    <td bgcolor="#FCEAD0" align="middle">palmo</td>
+    <td bgcolor="#FCEAD0" align="middle">codo</td>
+    
+        
+    <td bgcolor="#FCEAD0"><input onClick="resetform(this.form)" type="button" value="Calibrar"></td>
+  </tr>
+  <tr>
+    <td height="34"><input onfocus="clearform(this.form)" size="7" name="val1"></td>
+    <td><input onfocus="clearform(this.form)" size="7" name="val2"></td>
+    <td><input onfocus="clearform(this.form)" size="7" name="val3"></td>
+    <td><input onfocus="clearform(this.form)" size="7" name="val4"></td>
+    <td><input onfocus="clearform(this.form)" size="7" name="val5"></td>
+    <td><input onfocus="clearform(this.form)" size="7" name="val6"></td>
+    <td><input onfocus="clearform(this.form)" size="7" name="val7"></td>
+    <td><input onfocus="clearform(this.form)" size="7" name="val8"></td>
+    <td><input onfocus="clearform(this.form)" size="7" name="val9"></td>
+    <td><input onfocus="clearform(this.form)" size="7" name="val10"></td>
+    <td bgcolor="#FCEAD0"><input onclick="convertform(this.form)" type="button" value="Calcular"></td>
+    
+  </tr>
+</table>
+</Center>
+
+<script src="java/script.js"></script>
+<br>
+<button name="button">
+<p><a href="http://www.innoveduca.com/files/propis/mates_unidadmedida/24_conversin_de_unidades.html" target="_blank">info. de converción</a>
+  </button>
+  </p>
+  
+  <h3>Lista de otros tipo de conversores. :)</h3>
+   <div class="3" style="width:300px;height:100px;">
+  <button style="background-color: #E7FED2" name="button">
+<p><a href="index.html"><h1 align="right">Menu principal.</h1></a>
+  </button>
+  </p>
+</div> 
+  
+  <button style="background-color: #FDD6AE" name="button">
+<p><a href="pagina%20tp.html"><h4>convertir temperatura</h4></a>
+  </button>
+  </p>
+  
+    <button style="background-color: #F1FEC7" name="button">
+<p><a href="pagina%20ms.html"><h4>convertir masa..........</h4></a>
+  </button>
+  </p>
+  
+     <button style="background-color: #D8FFF5" name="button">
+<p><a href="pagina%20ADE.html"><h4>convertir velocidad</h4></a>
+  </button>
+  </p>
+  
+ <button style="background-color: #E7C6FD" name="button">
+<p><a href="pagina%20tmp.html"><h4>convertir tiempo</h4></a>
+  </button>
+  </p>
+      <button style="background-color: #FDFF67" name="button">
+<p><a href="pagina%20vl.html"><h4>convertir energia</h4></a>
+  </button>
+  </p>
+  
+          <button style="background-color: #F5CBA7" name="button">
+<p><a href="pagina%20nr.html"><h4>convertir números</h4></a>
+  </button>
+  </p>
+  
+            <button style="background-color: #D0ECE7" name="button">
+<p><a href="pagina%20vlm.html"><h4>convertir volumen</h4></a>
+  </button>
+  </p>
+  
+</body>
+</form>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculador-conversor de velocidad.</title>
+    <link rel="stylesheet" href="estilo/estilo6.css" type="text/css">
+<script language="JavaScript">
+
+function convertform(form){
+    var firstvalue = 0;
+    for (var i = 1; i <= form.count; i++) {
+       // Find first non-blank entry
+       if (form.elements[i].value != null && form.elements[i].value.length != 0) {
+          if (i == 1 && form.elements[2].value != "") return false;
+          firstvalue = form.elements[i].value / form.elements[i].factor;
+          break;
+       }
+    }
+    if (firstvalue == 0) {
+       clearform(form);
+       return false;
+    }
+    for (var i = 1; i <= form.count; i++)
+       form.elements[i].value = formatvalue((firstvalue * form.elements[i].factor), form.rsize);
+    return true;
+}
+function formatvalue(input, rsize) {
+   var invalid = "**************************";
+   var nines = "999999999999999999999999";
+   var strin = "" + input;
+   var fltin = parseFloat(strin);
+   if (strin.length <= rsize) return strin;
+   if (strin.indexOf("e") != -1 ||
+       fltin > parseFloat(nines.substring(0,rsize)+".4"))
+      return invalid.substring(0, rsize);
+   var rounded = "" + (fltin + (fltin - parseFloat(strin.substring(0, rsize))));
+   return rounded.substring(0, rsize);
+}
+function resetform(form) {
+    clearform(form);
+    form.elements[1].value = 1;
+    convertform(form);
+    return true;
+}
+function clearform(form) {
+    for (var i = 1; i <= form.count; i++) form.elements[i].value = "";
+    return true;
+}
+
+</script>
+<meta charset="utf-8">
+<form>
+  
+</head>
+
+<body>
+<center>
+<br>
+<div style="width:500px;height:65px; background-color:#D8FFF5; border-style:solid; border-color:#9C9C9B">
+<h1  style="color:#000000"><strong><u>Conversor de velocidad.</u></strong></h1>
+</div>
+
+
+<h1  style="color:#641E16 "> Información rapida.</h1>
+<h3>
+la velocidad es una cualidad, o condicion fisica, de caracter complejo,en la medida que tiene muchas formas de aplicación y diferentes manisfestaciones en recorrer una distancia dada,mayor sera la velocidad desarrollada,o que para recorrer el mismo espacio en menos tiempo 
+es necesario es hacerlo a mayor velocidad
+<br><br>
+<span class="3" style="width:300px;height:100px;"><img src="imagenes/velocidad1.jpg" align="right" width="400" height="300"/></span><br>
+</h3>
+
+
+<table width="489" border="10x" >
+  <tr>
+    <td vAlign="center" align="middle" colSpan="30">
+    <h2 align="center"><font size="6">Conversor de velocidad ;)</font></h2>
+    </td>
+  </tr>
+  <tr>
+  <td width="84" align="middle" bgcolor="#D8FFF5"><h2>metro <br>por <br>segundo</h2></td>
+    <td width="58" align="middle" bgcolor="#D8FFF5"><h2>milla <br>por <br>hora</h2></td>
+    <td width="83" align="middle" bgcolor="#D8FFF5"><h2>pie <br>por<br> segundo</h2></td>
+    <td width="106" align="middle" bgcolor="#D8FFF5"><h2>kilometro <br>por <br>hora</h2></td>
+    <td width="51" align="middle" bgcolor="#D8FFF5"><h2>nudo</h2></td>
+     <td width="62" bgcolor="#D8FFF5"><input onClick="resetform(this.form)" type="button" value="Calibrar"></td>
+ 
+   </tr>
+
+  <tr>
+    <td height="36"><input onFocus="clearform(this.form)" size="7" name="val1"></td>
+    <td><input onFocus="clearform(this.form)" size="7" name="val2"></td>
+    <td><input onFocus="clearform(this.form)" size="7" name="val3"></td>
+    <td><input onFocus="clearform(this.form)" size="7" name="val4"></td>
+    <td><input onFocus="clearform(this.form)" size="7" name="val5"></td>
+ <td bgcolor="#D8FFF5"><input onClick="convertform(this.form)" type="button" value="Calcular"></td>
+   
+  </tr>
+</table>
+<script language="JavaScript">
+
+document.forms[0].count = 5;  
+document.forms[0].rsize = 10;  
+document.forms[0].val1.factor = 1;            // m to m.
+document.forms[0].val2.factor = 2.237;  // m to in.
+document.forms[0].val3.factor = 3.281;  // m to ft.
+document.forms[0].val4.factor = 3.6;  // m to yards.
+document.forms[0].val5.factor = 1.944; // m to mi.
+
+</script>
+</Center>
+<br>
+<button name="button">
+<p><a href="https://vitual.lat/conversion-de-unidades-de-velocidad/">info. de converción</a>
+  </button>
+  </p>
+  
+  <h3>Lista de otros tipo de conversores. :)</h3>
+  
+ <div class="3" style="width:300px;height:100px;">
+  <button style="background-color: #E7FED2" name="button">
+  <p><a href="index.html"><h1 align="right">Menu principal.</h1></a>
+  </button>
+  </p>
+</div> 
+
+    <button style="background-color: #D0F8FE" name="button">
+<p><a href="pagina%20ds.html?val1=1000&val2=1&val3=100000&val4=1000000&val5=39370.1&val6=3280.84&val7=1093.61&val8=0.621371&val9=4374&val10=2247.2&button="><h4>convertir medidas.</h4></a>
+  </button>
+  </p>
+  
+  <button style="background-color: #FDD6AE" name="button">
+<p><a href="pagina%20tp.html"><h4>convertir temperatura</h4></a>
+  </button>
+  </p>
+  
+    <button style="background-color: #F1FEC7" name="button">
+<p><a href="pagina%20ms.html"><h4>convertir masa..........</h4></a>
+  </button>
+  </p>
+  
+ <button style="background-color: #E7C6FD" name="button">
+<p><a href="pagina%20tmp.html"><h4>convertir tiempo</h4></a>
+  </button>
+  </p>
+      <button style="background-color: #FDFF67" name="button">
+<p><a href="pagina%20vl.html"><h4>convertir energia</h4></a>
+  </button>
+  </p>
+
+        <button style="background-color: #F5CBA7" name="button">
+<p><a href="pagina%20nr.html"><h4>convertir números</h4></a>
+  </button>
+  </p>
+  
+            <button style="background-color: #D0ECE7" name="button">
+<p><a href="pagina%20vlm.html"><h4>convertir volumen</h4></a>
+  </button>
+  </p>
+  
+</body>
+</form>
+</html>

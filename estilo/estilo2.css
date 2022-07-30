@@ -1,0 +1,17 @@
+    body,td,th {
+	color: #000;
+}
+body {
+	  heigh:665px;
+  background-image: url("https://img.freepik.com/foto-gratis/colores-terrosos-gris-amarillo-beige-pastel-textura-acuarela-pintada-sobre-papel-fondo-abstracto_365663-329.jpg");
+  background-size: 150rem;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+table {
+	background-color:#FBE0DD;
+	
+}
+

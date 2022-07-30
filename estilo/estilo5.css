@@ -1,0 +1,16 @@
+    body,td,th {
+	color: #000;
+}
+body {
+	  heigh:665px;
+  background-image: url("https://www.commentnation.com/backgrounds/images/aqua_pastel_matte_pattern.jpg");
+  background-size: 150rem;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+table {
+	background-color:#DCFEA5;
+	
+}

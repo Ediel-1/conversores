@@ -1,0 +1,19 @@
+    body,td,th {
+	color: #000;
+}
+body {
+	  heigh:665px;
+  background-image: url("https://previews.123rf.com/images/lovender/lovender1705/lovender170500081/78485497-patr%C3%B3n-de-hex%C3%A1gono-verde-fondo-de-vector-transparente-con-hex%C3%A1gonos-de-menta-sobre-fondo-verde-claro.jpg");
+  background-size: 10rem;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+table {
+	background-color:#ECF0F1;
+	
+}
+.4{
+	font-size:16px;
+}

@@ -1,0 +1,12 @@
+document.forms[0].count = 10;  // número de tipos de unidades
+document.forms[0].rsize = 8;  // Tamaño de redondeo, use lo mismo que TAMAÑO.
+document.forms[0].val1.factor = 1;           // m to m.
+document.forms[0].val2.factor = 0.001;       //m to km.
+document.forms[0].val3.factor = 100;         // m to cm.
+document.forms[0].val4.factor = 1000;        // m to mm.
+document.forms[0].val5.factor = 39.3701;     // m to in.
+document.forms[0].val6.factor = 3.28084;     // m to ft.
+document.forms[0].val7.factor = 1.09361;     // m to yards.
+document.forms[0].val8.factor = 0.000621371; // m to mi.
+document.forms[0].val9.factor = 4.374;       // m to pal.
+document.forms[0].val10.factor = 2.2472;     // m to cd.

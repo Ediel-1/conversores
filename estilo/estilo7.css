@@ -1,0 +1,16 @@
+    body,td,th {
+	color: #000;
+}
+body {
+	  heigh:665px;
+  background-image: url("https://i.pinimg.com/736x/a1/20/b3/a120b3b52a44aea56318c448c63d7eb5.jpg");
+  background-size: 150rem;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+table {
+	background-color:#FFD993;
+	
+}

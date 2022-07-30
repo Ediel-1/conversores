@@ -1,0 +1,14 @@
+   body,td,th {
+	color: #000;
+}
+body {
+  heigh:665px;
+  background-image: url("https://i.pinimg.com/originals/a8/e5/ef/a8e5ef244d1d255fd88cb6ddc3567cdc.jpg");
+  background-size: 70rem;
+  background-repeat: repeat;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+

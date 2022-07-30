@@ -1,0 +1,16 @@
+    body,td,th {
+	color: #000;
+}
+body {
+	  heigh:665px;
+  background-image: url("https://thumbs.dreamstime.com/b/fondo-gris-claro-124369161.jpg");
+  background-size: 150rem;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+table {
+	background-color:#ECF0F1;
+	
+}
